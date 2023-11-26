@@ -1,7 +1,8 @@
 <?php
 namespace Core;
 
-class Router {
+class Router 
+{
     private $routes;
 
     public static function getTrack ($routes, $uri) 
