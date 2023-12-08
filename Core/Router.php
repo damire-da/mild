@@ -22,19 +22,19 @@ class Router
         return [];
     }
 
-    /*
-        Метод преобразует путь из роута в регуляку,
-        подставляя вместо параметров роута именованные карманы
-        см. тут про такие карманы http://code.mu/ru/php/video/named-pockets-in-php-regulars/
-    
-        к примеру, из адреса '/test/:var1/:var2/' метод
-        сделает регулярку '#^/test/(?<var1>[^/]+)/(?<var2>[^/]+)/?$#'
-    */
+    /**
+     * The method converts the path from a route to a regular expression
+     * For example, from the address method '/test/:var1/:var2/'
+     * our regular sequence '#^/test/(?<var1>[^/]+)/(?<var2>[^/]+)/?$#'
+     */
     private static function createPattern($path)
     {
         return '#^' . preg_replace('#/:([^/]+)#', '/(?<$1>[^/]+)', $path) . '/?$#';
     }
     
+    /**
+     * Clear $params from numeric key
+     */
     private static function clearParams($params)
     {
         $result = [];
