@@ -2,6 +2,9 @@
 
 namespace Core;
 
+/**
+ * Dispatcher for call current Controller
+ */
 class Dispatcher
 {
     public function getPage(Track $track)
