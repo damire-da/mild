@@ -1,6 +1,9 @@
 <?php
 namespace Core;
 
+/**
+ * Current Route object for call.
+ */
 class Track 
 {
     private $controller;

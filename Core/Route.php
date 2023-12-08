@@ -1,6 +1,10 @@
 <?php
 namespace Core;
 
+/**
+ * Check /project/config/routes.php.
+ * Contains the path, controller and action of controller.
+ */
 class Route 
 {
     private $path;
