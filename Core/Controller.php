@@ -11,7 +11,7 @@ class Controller
     protected $title = "";
 
     /**
-     * 
+     * Create page.
      */
     protected function render($view, $data) 
     {
