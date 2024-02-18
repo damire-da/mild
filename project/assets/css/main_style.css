@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+body{
+    padding: 10px 80px 10px 80px;
+}
+h1{
+    font-family: "Red Hat Display-Black", sans-serif;
+}
+p{
+    font-family: "Raleway-Regular", sans-serif;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+}
+b{
+    font-weight: 700;
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+}
+.nav_item{
+    padding: 10px 20px 10px 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.nav_item:hover{
+    cursor: pointer;
+}
+.button_item{
+    background-color: #000000CC;
+    color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+.button_item:hover{
+    cursor: pointer;
+    background-color: rgba(77, 77, 77, 0.8);
+    color: #ffffff;
+}
+
+.main{
+    flex: 1 1 auto;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.main p{
+    font-family: "Raleway-Bold", sans-serif;
+    padding: 10px 20px 10px 20px;
+    font-size: 30px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    left: 0; bottom: 0;
+}
+@font-face {
+    font-family: "Red Hat Display-Black";
+    src: url("/assets/fonts/RedHatDisplay-Black.ttf") format("truetype");
+    font-weight: 700;
+    font-size: 30px;
+}
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url("/assets/fonts/Raleway-Bold.ttf") format("truetype");
+    font-weight: 400;
+    font-size: 30px;
+}
