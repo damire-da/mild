@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div id="header-placeholder"></div>
+        <?php include 'header.php';?>
         <main class="main">
             <p style="margin: 40px 10px 40px 10px;">"Как звезды на небе, <b>SMART</b>-цели указывают вам путь
                 к вашим мечтам." - ChatGpt</p>
