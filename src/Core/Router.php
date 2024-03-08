@@ -1,5 +1,7 @@
 <?php
-namespace Core;
+declare(strict_types = 1);
+
+namespace Mild\Core;
 
 /**
  * Router return object Track and Track is the current Route need to call.
@@ -8,7 +10,7 @@ class Router
 {
     private $routes;
 
-    public static function getTrack($routes, $uri)
+    public static function getTrack($routes, $uri): Track
     {
         foreach ($routes as $route) {
             $pattern = self::createPattern($route->path);

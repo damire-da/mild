@@ -1,9 +1,10 @@
 <?php
+declare(strict_types = 1);
 
-namespace Core;
+namespace Mild\Core;
 
 /**
- * Model for work with database from /project/config/connection.php
+ * Model for work with database from /Project/config/connection.php
  */
 class Model 
 {

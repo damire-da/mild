@@ -1,6 +1,7 @@
 <?php
+declare(strict_types = 1);
 
-namespace Core;
+namespace Mild\Core;
 
 /**
  * BaseController.
@@ -13,7 +14,7 @@ class Controller
     /**
      * Create page.
      */
-    protected function render($view, $data) 
+    protected function render($view, $data = [])
     {
         return new Page($this->layout, $this->title, $view, $data);
     }

@@ -1,6 +1,7 @@
 <?php
+declare(strict_types = 1);
 
-namespace Core;
+namespace Mild\Core;
 
 /**
  * Object contains data for template.

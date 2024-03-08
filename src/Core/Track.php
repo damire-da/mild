@@ -1,5 +1,7 @@
 <?php
-namespace Core;
+declare(strict_types = 1);
+
+namespace Mild\Core;
 
 /**
  * Current Route object for call.

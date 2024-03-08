@@ -1,8 +1,10 @@
 <?php
-namespace Core;
+declare(strict_types = 1);
+
+namespace Mild\Core;
 
 /**
- * Check /project/config/routes.php.
+ * Check /config/routes.php.
  * Contains the path, controller and action of controller.
  */
 class Route 

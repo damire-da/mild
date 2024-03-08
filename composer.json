@@ -1,0 +1,10 @@
+{
+    "name": "damirhasanshin/mild",
+    "autoload": {
+        "psr-4": {
+            "Mild\\Core\\": "src/Core",
+            "Mild\\Controller\\": "src/Controller"
+        }
+    },
+    "require": {}
+}
