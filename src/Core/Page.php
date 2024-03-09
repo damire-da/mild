@@ -8,10 +8,10 @@ namespace Mild\Core;
  */
 class Page
 {
-    private $layout;
-    private $title;
-    private $view;
-    private $data;
+    private string $layout;
+    private string $title;
+    private string $view;
+    private array $data;
 
     public function __construct($layout, $title, $view, $data) {
         $this->layout = $layout;

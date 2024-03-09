@@ -8,9 +8,7 @@ namespace Mild\Core;
  */
 class Router
 {
-    private $routes;
-
-    public static function getTrack($routes, $uri): Track
+    public static function getTrack($routes, $uri): Track|array
     {
         foreach ($routes as $route) {
             $pattern = self::createPattern($route->path);
@@ -29,7 +27,7 @@ class Router
      * For example, from the address method '/test/:var1/:var2/'
      * our regular sequence '#^/test/(?<var1>[^/]+)/(?<var2>[^/]+)/?$#'
      */
-    private static function createPattern($path)
+    private static function createPattern($path): string
     {
         return '#^' . preg_replace('#/:([^/]+)#', '/(?<$1>[^/]+)', $path) . '/?$#';
     }
@@ -37,7 +35,7 @@ class Router
     /**
      * Clear $params from numeric key
      */
-    private static function clearParams($params)
+    private static function clearParams($params): array
     {
         $result = [];
         

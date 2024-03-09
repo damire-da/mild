@@ -4,7 +4,6 @@ declare(strict_types = 1);
 namespace Mild\Core;
 
 use Exception;
-use \Mild\Controller;
 
 /**
  * Dispatcher for call current Controller
@@ -29,7 +28,7 @@ class Dispatcher
                 return $result;
               }
 
-              return new Page('default', 'default page', '/views/default.php', []);
+              return new Page('default', 'default page', 'default.php', []);
             }
         } catch (Exception $e) {
             return new Exception($e->getMessage());

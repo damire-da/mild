@@ -41,7 +41,7 @@
             <p style='margin: 80px 0px 50px 0px; font-family: "Inter-Medium", sans-serif;'><b>Хороший пример</b></p>
             <p><b>Цель:</b> "Делать 365 фотографий разного стиля и опубликовать их в социальных сетях
                 каждый день в течение года ".</p>
-            <ui>
+            <ul>
                 <li>S - Цель конкретно определяет, что нужно сделать - сделать 365 фотографий
                     и опубликовать их в течение года.</li>
                 <li>
@@ -59,7 +59,7 @@
                 <li>
                     T - Цель имеет четкое временное ограничение - каждый день в течение года.
                 </li>
-            </ui>
+            </ul>
             <p>Этот пример SMART-цели является более эффективным, так как он конкретизирует цель,
                 определяет критерии успеха, учитывает реалистичность, связан с текущими задачами
                 и имеет четкое время завершения.</p>
@@ -70,10 +70,11 @@
             </div>
             <div class="navigation">
                 <p>Made with Mild</p>
-                <a><img src="/src/assets/images/mild_rep_git.png" style="width: 100px; height: 100px"></a>
+                <a href="https://github.com/damire-da/mild" target="_blank">
+                  <img src="/src/assets/images/mild_rep_git.png" style="width: 100px; height: 100px">
+                </a>
             </div>
         </footer>
     </div>
-    <script src="/src/assets/js/header.js"></script>
 </body>
 </html>

@@ -7,8 +7,8 @@ use Mild\Core\Page;
 
 class MainController extends Controller
 {
-    public function main(): Page
+    public function index(): Page
     {
-        return $this->render('/views/main.php');
+        return $this->render('main.php');
     }
 }

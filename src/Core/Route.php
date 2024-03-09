@@ -9,9 +9,9 @@ namespace Mild\Core;
  */
 class Route 
 {
-    private $path;
-    private $controller;
-    private $action;
+    private string $path;
+    private string $controller;
+    private string $action;
 
     public function __construct($path, $controller, $action) {
         $this->path = $path;
