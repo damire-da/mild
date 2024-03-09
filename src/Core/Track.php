@@ -8,9 +8,9 @@ namespace Mild\Core;
  */
 class Track 
 {
-    private $controller;
-    private $action;
-    private $params;
+    private string $controller;
+    private string $action;
+    private array $params;
 
     public function __construct($controller, $action, $params) {
         $this->controller = $controller;

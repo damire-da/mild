@@ -7,6 +7,6 @@
 use Mild\Core\Route;
 
 return [
-    new Route('/', 'main', 'main'),
-    new Route('/home', 'main', 'main'),
+    new Route('/', 'main', 'index'),
+    new Route('/cards', 'card', 'index'),
 ];
