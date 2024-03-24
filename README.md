@@ -2,6 +2,7 @@
 php web framework
 
 # nginx
+```
 server {
         listen 80;
         server_name mild.lc;
@@ -20,3 +21,4 @@ server {
         }
 
 }
+```
