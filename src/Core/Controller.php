@@ -14,8 +14,10 @@ class Controller
     /**
      * Create page.
      */
-    protected function render($view, $data = []): Page
+    protected function render($view = '', $data = []): Page|false
     {
-        return new Page($this->layout, $this->title, $view, $data);
+        return !empty($view)
+          ? new Page($this->layout, $this->title, $view, $data)
+          : false;
     }
 }
