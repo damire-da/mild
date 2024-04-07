@@ -11,20 +11,12 @@ ini_set('display_errors', 'on');
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/config/connection.php";
 
-try {
-  // Устанавливаем соединение с базой данных
-  $pdo = new PDO(DB_DSN, DB_USER,DB_PASSWORD);
-
-  // Устанавливаем режим обработки ошибок PDO на исключения
-  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-  // Выводим сообщение об ошибке
-  die($e->getMessage());
-}
+$db = Model::getInstance();
+$conn = $db->getConnection();
+$data = array_merge($_POST, $_GET);
 
 $routes = require $_SERVER['DOCUMENT_ROOT'] . '/config/routes.php';
-
-$track = Router::getTrack($routes, $_SERVER['REQUEST_URI']);
+$track = Router::getTrack($routes, $_SERVER['REQUEST_URI'], $conn, $data);
 
 $page = (new Dispatcher)->getPage($track);
 

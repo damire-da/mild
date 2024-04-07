@@ -8,26 +8,41 @@ namespace Mild\Core;
  */
 class Model 
 {
-    private static $pdo = null;
+    private static ?Model $instance = null;
+    private ?\PDO $pdo = null;
 
     public function __construct() 
     {
-        if (self::$pdo === null) {
+        if ($this->pdo === null) {
             try {
-                self::$pdo = new \PDO(DB_DSN, DB_USER, DB_PASSWORD);
+              $this->pdo = new \PDO(DB_DSN, DB_USER, DB_PASSWORD);
             } catch (\PDOException $e) {
                 die($e->getMessage());
             }
         }
     }
 
+    public static function getInstance(): Model
+    {
+        if (self::$instance === null) {
+            self::$instance = new Model();
+        }
+
+        return self::$instance;
+    }
+
+    public function getConnection(): \PDO
+    {
+        return $this->pdo;
+    }
+
     public function findOne($query) {
-        $result = self::$pdo->query($query) or die(self::$pdo->errorInfo());
+        $result = $this->pdo->query($query) or die($this->pdo->errorInfo());
         return $result->fetch(\PDO::FETCH_ASSOC);
     }
 
     public function findAll($query) {
-        $result = self::$pdo->query($query) or die(self::$pdo->errorInfo());
+        $result = $this->pdo->query($query) or die($this->pdo->errorInfo());
         $data = [];
         
         for ($data = []; $row = $result->fetch(\PDO::FETCH_ASSOC); $data[] = $row);

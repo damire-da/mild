@@ -10,8 +10,14 @@ class Controller
 {
     protected string $layout = "default";
     protected string $title = "";
+    protected static \PDO $conn;
 
-    /**
+    public function __construct(\PDO $conn)
+    {
+        self::$conn = $conn;
+    }
+
+  /**
      * Create page.
      */
     protected function render($view = '', $data = []): Page|false

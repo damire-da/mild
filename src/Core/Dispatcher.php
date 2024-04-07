@@ -19,7 +19,7 @@ class Dispatcher
         $className = "Mild\\Controller\\" . ucfirst($track->controller) . "Controller";
 
         try {
-            $controller = new $className();
+            $controller = new $className($track->conn);
 
             if (method_exists($controller, $track->action)) {
               $result = $controller->{$track->action}($track->params);

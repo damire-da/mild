@@ -8,14 +8,14 @@ namespace Mild\Core;
  */
 class Router
 {
-    public static function getTrack($routes, $uri): Track|array
+    public static function getTrack($routes, $uri, $conn, $data): Track|array
     {
         foreach ($routes as $route) {
             $pattern = self::createPattern($route->path);
 
             if (preg_match($pattern, $uri, $params)) {                
-                $params = self::clearParams($params);
-                return new Track($route->controller, $route->action, $params);
+                $params = array_merge(self::clearParams($params), $data);
+                return new Track($route->controller, $route->action, $params, $conn);
             }
         }
 
