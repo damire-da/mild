@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Smart</title>
-    <link rel="stylesheet" href="/project/assets/css/main_style.css">
+    <link rel="stylesheet" href="/src/assets/css/main_style.css">
 </head>
 <body id="body">
 <div class="wrapper">
