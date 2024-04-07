@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Smart</title>
-    <link rel="stylesheet" href="/src/assets/css/main_style.css">
+    <link rel="stylesheet" href="/project/assets/css/main_style.css">
 </head>
-<body>
+<body id="body">
     <div class="wrapper">
         <?php include 'header.php';?>
+
         <main class="main">
             <p style="margin: 40px 10px 40px 10px;">"Как звезды на небе, <b>SMART</b>-цели указывают вам путь
                 к вашим мечтам." - ChatGpt</p>
@@ -41,7 +42,7 @@
             <p style='margin: 80px 0px 50px 0px; font-family: "Inter-Medium", sans-serif;'><b>Хороший пример</b></p>
             <p><b>Цель:</b> "Делать 365 фотографий разного стиля и опубликовать их в социальных сетях
                 каждый день в течение года ".</p>
-            <ul>
+            <ui>
                 <li>S - Цель конкретно определяет, что нужно сделать - сделать 365 фотографий
                     и опубликовать их в течение года.</li>
                 <li>
@@ -59,7 +60,7 @@
                 <li>
                     T - Цель имеет четкое временное ограничение - каждый день в течение года.
                 </li>
-            </ul>
+            </ui>
             <p>Этот пример SMART-цели является более эффективным, так как он конкретизирует цель,
                 определяет критерии успеха, учитывает реалистичность, связан с текущими задачами
                 и имеет четкое время завершения.</p>
@@ -70,11 +71,10 @@
             </div>
             <div class="navigation">
                 <p>Made with Mild</p>
-                <a href="https://github.com/damire-da/mild" target="_blank">
-                  <img src="/src/assets/images/mild_rep_git.png" style="width: 100px; height: 100px">
-                </a>
+                <a><img src="/assets/images/mild_rep_git.png" style="width: 100px; height: 100px"></a>
             </div>
         </footer>
     </div>
+    <script src="/assets/js/regestration.js"></script>
 </body>
 </html>
