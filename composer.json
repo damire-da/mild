@@ -6,5 +6,7 @@
             "Mild\\Controller\\": "src/Controller"
         }
     },
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }

@@ -8,6 +8,6 @@ class CardController extends Controller
 {
     public function index(): \Mild\Core\Page|false
     {
-        return $this->render();
+        return $this->render('biblia.php');
     }
 }

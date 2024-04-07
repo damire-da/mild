@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Smart</title>
-    <link rel="stylesheet" href="/project/assets/css/main_style.css">
+    <link rel="stylesheet" href="/src/assets/css/main_style.css">
 </head>
 <body id="body">
     <div class="wrapper">
@@ -71,10 +71,10 @@
             </div>
             <div class="navigation">
                 <p>Made with Mild</p>
-                <a><img src="/assets/images/mild_rep_git.png" style="width: 100px; height: 100px"></a>
+                <a><img src="/src/assets/images/mild_rep_git.png" style="width: 100px; height: 100px"></a>
             </div>
         </footer>
     </div>
-    <script src="/assets/js/regestration.js"></script>
+    <script src="/src/assets/js/regestration.js"></script>
 </body>
 </html>
