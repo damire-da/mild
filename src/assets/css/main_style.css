@@ -137,13 +137,7 @@ b{
     font-size: 20px;
 }
 @font-face {
-    font-family: "Inter-Medium";
-    src: url("/assets/fonts/Inter-Medium.ttf") format("truetype");
-    font-weight: 700;
-<<<<<<< HEAD
-    font-size: 30px;
+  font-family: "Inter-Medium";
+  src: url("/assets/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 700;
 }
-=======
-    font-size: 20px;
-}
->>>>>>> 7e7b6606236bb985d0ce1dbdaa5506de2458a66a

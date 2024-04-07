@@ -1,5 +1,4 @@
-<?php
-    echo '<header class="header">
+<header class="header">
         <style type="text/css">
             .enter, .reg {
                 display: none;
@@ -54,7 +53,7 @@
                 padding: 5px;
             }
 </style>
-<script type = text/javascript>
+<script type="text/javascript">
     function openRegForm() {
         let reg = document.querySelector(".reg");
         let overlay = document.querySelector(".overlay");
@@ -84,26 +83,33 @@
         overlay.style.display = "block";
     }
 </script>
-        <nav class="navigation">
+
+  <nav class="navigation">
             <a class="nav_item" style="color: rgba(0, 0, 0, 0.8);"><h1>Mild</h1></a>
             <a href="/" class="nav_item"><p>Главная</p></a>
             <a href="/cards" class="nav_item"><p>Мои цели</p></a>
-        </nav>
-        <nav class="navigation">
-            <a class="nav_item" style="font-weight: 500" onclick="openRegForm()"><p>Регистрация</p></a>
-            <a class="button_item" onclick="openEnterForm()"><p>Вход</p></a>
-        </nav>
-        <div class="overlay" onclick="closePopup()"></div>
-            <div class="reg">
-                <form class="forma" style="display: flex; flex-direction: column; margin: 10px;padding: 20px">
+  </nav>
+
+
+<?php if (isset($data["user_id"])): ?>
+    <?php echo $data["username"];?>
+    <a class="button_item" href="/logout"><p>Выход</p></a>
+<?php else: ?>
+  <nav class="navigation">
+    <a class="nav_item" style="font-weight: 500" onclick="openRegForm()"><p>Регистрация</p></a>
+    <a class="button_item" onclick="openEnterForm()"><p>Вход</p></a>
+  </nav>
+  <div class="overlay" onclick="closePopup()"></div>
+    <div class="reg">
+                <form class="forma" action="/register" method="POST" style="display: flex; flex-direction: column; margin: 10px;padding: 20px">
                     <h1 style="text-align: center; color:white"><b>Регистрация</b></h1>
                     <br>
                     <label for="reg_username">Логин:</label>
-                    <input type="text" id="reg_username" name="reg_username" placeholder="Введите логин">
+                    <input type="text" id="reg_username" name="username" placeholder="Введите логин">
                     <label for="email">Электронная почта:</label>
                     <input type="email" id="email" name="email" placeholder="Введите эл. почту">
                     <label for="reg_password">Пароль:</label>
-                    <input type="password" id="reg_password" name="reg_password" placeholder="Введите пароль">
+                    <input type="password" id="reg_password" name="password" placeholder="Введите пароль">
                     <label for="repassword">Повторите пароль:</label>
                     <input type="password" id="repassword" name="repassword" placeholder="Повторите пароль">
                     <br>
@@ -111,17 +117,17 @@
                 </form>
             </div>
             <div class="enter">
-                <form class="forma" style="display: flex; flex-direction: column; margin: 10px;padding: 20px">
+                <form class="forma" action="/login" method="POST" style="display: flex; flex-direction: column; margin: 10px;padding: 20px">
                     <h1 style="text-align: center; color:white"><b>Вход</b></h1>
                     <br>
                     <label for="enter_username">Логин:</label>
-                    <input type="text" id="enter_username" name="enter_username" placeholder="Введите логин">
+                    <input type="text" id="enter_username" name="username" placeholder="Введите логин">
                     <label for="enter_password">Пароль:</label>
-                    <input type="password" id="enter_password" name="enter_password" placeholder="Введите пароль">
+                    <input type="password" id="enter_password" name="password" placeholder="Введите пароль">
 
                     <br>
                     <button class="submit_button" type="submit">Войти</button>
                 </form>
             </div>
-    </header>';
-?>
+            <?php endif; ?>
+    </header>
