@@ -9,7 +9,7 @@ class AuthController extends Controller
 {
     public function login(array $data)
     {
-      $username = $data['username'];
+        $username = $data['username'];
         $password = $data['password'];
 
         $stmt = parent::$conn->prepare("SELECT * FROM users WHERE username = :username");
@@ -19,8 +19,8 @@ class AuthController extends Controller
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user && password_verify($password, $user['password'])) {
-          $data['user_id'] = $user['id'];
-          $data['username'] = $user['username'];
+          $_SESSION['user_id'] = $data['user_id'] = $user['id'];
+          $_SESSION['username'] = $data['username'] = $user['username'];
           return $this->render('main.php', $data);
         } else {
           $data['error'] = 'Неверный логин или пароль';

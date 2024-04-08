@@ -91,8 +91,8 @@
   </nav>
 
 
-<?php if (isset($data["user_id"])): ?>
-    <?php echo $data["username"];?>
+<?php if (isset($_SESSION["user_id"])): ?>
+    <?php echo $_SESSION["username"];?>
     <a class="button_item" href="/logout"><p>Выход</p></a>
 <?php else: ?>
   <nav class="navigation">

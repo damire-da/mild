@@ -92,7 +92,7 @@
         </div>
         <div class="navigation">
             <p>Made with Mild</p>
-            <a><img src="/assets/images/mild_rep_git.png" style="width: 100px; height: 100px"></a>
+            <a><img src="/src/assets/images/mild_rep_git.png" style="width: 100px; height: 100px"></a>
         </div>
     </footer>
 </div>
