@@ -1,9 +1,7 @@
 <?php
 namespace Mild\Core;
 
-use PDO;
-use PDOException;
-
+session_start();
 require_once __DIR__ . '/vendor/autoload.php';
 
 error_reporting(E_ALL);
