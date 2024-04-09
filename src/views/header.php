@@ -117,8 +117,11 @@
                 </form>
             </div>
             <div class="enter">
-                <form class="forma" action="/login" method="POST" style="display: flex; flex-direction: column; margin: 10px;padding: 20px">
+                <form class="forma" method="POST" style="display: flex; flex-direction: column; margin: 10px;padding: 20px" id="login-form">
                     <h1 style="text-align: center; color:white"><b>Вход</b></h1>
+                    <?php if (isset($data['error'])): ?>
+                      <p style="color: red;"><?php echo htmlspecialchars($data['error']); ?></p>
+                    <?php endif; ?>
                     <br>
                     <label for="enter_username">Логин:</label>
                     <input type="text" id="enter_username" name="username" placeholder="Введите логин">
