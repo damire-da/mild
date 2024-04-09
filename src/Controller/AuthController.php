@@ -23,7 +23,7 @@ class AuthController extends Controller
           $_SESSION['username'] = $data['username'] = $user['username'];
           return $this->render('main.php', $data);
         } else {
-          $data['error'] = 'Неверный логин или пароль';
+          $data['error'] = 'Был введен неверный логин или пароль';
           return $this->render('main.php', $data);
         }
       }
