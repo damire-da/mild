@@ -52,6 +52,17 @@
             border-radius: 10px;
             padding: 5px;
         }
+        .close_button{
+            font-family: "Raleway-Bold", sans-serif;
+            color: rgba(255, 255, 255, 0.80);
+            font-size: 30px;
+            background: none;
+            border: none;
+        }
+        .close_button:hover{
+            color: white;
+            cursor: pointer;
+        }
     </style>
     <script type="text/javascript">
         function openRegForm() {
@@ -106,6 +117,7 @@
     </nav>
     <div id = reg class="reg">
         <form class="forma" action="/register" method="POST" style="display: flex; flex-direction: column; margin: 10px;padding: 20px">
+            <a class="close_button" onclick="closePopup()">x</a>
             <h1 style="text-align: center; color:white"><b>Регистрация</b></h1>
             <br>
             <label for="reg_username">Логин:</label>
@@ -122,6 +134,7 @@
     </div>
     <div class="enter">
         <form class="forma" action="/login" method="POST" style="display: flex; flex-direction: column; margin: 10px;padding: 20px">
+            <a class="close_button" onclick="closePopup()">x</a>
             <h1 style="text-align: center; color:white"><b>Вход</b></h1>
             <br>
             <label for="enter_username">Логин:</label>

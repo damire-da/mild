@@ -67,6 +67,13 @@
                 border-radius: 10px;
                 background-color: white;">
             <div style="display: flex; flex-direction: column; margin: 10px;padding: 20px">
+                <div style="display: flex; justify-content: space-between; height: 32px">
+                    <div>
+                        <img src="/src/assets/images/updata.jpg">
+                        <img src="/src/assets/images/delete.jpg">
+                    </div>
+                    <a style="color: rgba(0,0,0,0.80)" class="close_button" onclick="closePopup()">X</a>
+                </div>
                 <p style="text-align: center">Карточка #...</p>
                 <div>
                     <p>Specific</p>
@@ -83,6 +90,7 @@
                 <div>
                     <p>Time-bound</p>
                 </div>
+
             </div>
         </div>
     </main>
