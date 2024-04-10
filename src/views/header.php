@@ -141,7 +141,6 @@
             <input type="text" id="enter_username" name="username" placeholder="Введите логин">
             <label for="enter_password">Пароль:</label>
             <input type="password" id="enter_password" name="password" placeholder="Введите пароль">
-
             <br>
             <button class="submit_button" type="submit">Войти</button>
         </form>
